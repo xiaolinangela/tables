@@ -1,42 +1,3 @@
-// function loadData1(callback) {
-//   var httpRequest = new XMLHttpRequest();
-//   httpRequest.onreadystatechange = function () {
-//     if (httpRequest.readyState === 4) {
-//       // request is done
-//       if (httpRequest.status === 200) {
-//         // successfully
-//         callback(httpRequest.responseText); // we're calling our method
-//       }
-//     }
-//   };
-//   httpRequest.open("GET", "https://publictest.sandbox.tabapay.net/data1", true);
-//   httpRequest.send();
-// }
-
-// loadData1(function (result) {
-//   result = result.split(/\r?\n/);
-//   new_result = [];
-//   result.pop();
-//   for (var i = 0; i < result.length; i++) {
-//     var temp = result[i].split(",");
-//     new_result = new_result.concat(temp[0]);
-//   }
-//   var table = document.querySelector("#transactions");
-
-//   var i = 0;
-//   while (i < new_result.length) {
-//     var newRow = table.insertRow(-1);
-//     var j = 0;
-//     while (j < 9) {
-//       var cell = newRow.insertCell(j);
-//       var newText = document.createTextNode(new_result[i]);
-//       cell.appendChild(newText);
-//       i = i + 1;
-//       j = j + 1;
-//     }
-//   }
-// });
-
 function loadData2() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
@@ -107,3 +68,42 @@ function loadData1() {
 }
 
 loadData1();
+
+// function loadData1(callback) {
+//   var httpRequest = new XMLHttpRequest();
+//   httpRequest.onreadystatechange = function () {
+//     if (httpRequest.readyState === 4) {
+//       // request is done
+//       if (httpRequest.status === 200) {
+//         // successfully
+//         callback(httpRequest.responseText); // we're calling our method
+//       }
+//     }
+//   };
+//   httpRequest.open("GET", "https://publictest.sandbox.tabapay.net/data1", true);
+//   httpRequest.send();
+// }
+
+// loadData1(function (result) {
+//   result = result.split(/\r?\n/);
+//   new_result = [];
+//   result.pop();
+//   for (var i = 0; i < result.length; i++) {
+//     var temp = result[i].split(",");
+//     new_result = new_result.concat(temp[0]);
+//   }
+//   var table = document.querySelector("#transactions");
+
+//   var i = 0;
+//   while (i < new_result.length) {
+//     var newRow = table.insertRow(-1);
+//     var j = 0;
+//     while (j < 9) {
+//       var cell = newRow.insertCell(j);
+//       var newText = document.createTextNode(new_result[i]);
+//       cell.appendChild(newText);
+//       i = i + 1;
+//       j = j + 1;
+//     }
+//   }
+// });
